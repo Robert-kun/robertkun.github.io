@@ -2,14 +2,22 @@
 
 /*Formulário*/
 
+body {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
 .form {
     position: relative;
     top: -25px;
 }
 
 .container_form {
-    width: 100vw;
-    margin: auto;
+    width: 80%;
+    heigth: 100vh;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     background:#ffffff; 
