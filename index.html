@@ -1,80 +1,132 @@
-<html>
-  <head>
-    <title>Cadastro</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div>
-    <h1 id="titulo">Cadastro de DEVs</h1>
-    <p id="subtitulo">Complete suas informações</p>
-  </div>
-  <form>
-    <fieldset class="grupo">
-      <div class="campo">
-      <label for="nome"><strong>Nome</strong></label>
-      <input type="text" name="nome" id="nome" required></input>
-      </div>
-      <div class="campo">
-         <label for="sobrenome"><strong>Sobrenome</strong></label>
-      <input type="text" name="sobrenome" id="sobrenome" required>
-        </div>
-      </fieldset>
-  <br>
-  <div class="campo">
-        <label for="email"><strong>Email</strong></label>
-      <input type="email" name="email" id="email" required>
-  </div>
-  <br>
-  <div class="campo">
-    <label><strong>De qual lado da aplicação você desenvolve?</strong></label>
-    <label>
-    <input type="radio" nome="devweb" value="frontend" checked>Front-end
-    </input>
-    </label>
-  <label>
-  <input type="radio" nome="devweb" value="backend">Back-end
-    </input>
-  </label>
-  <label>
-  <input type="radio" nome="devweb" value="fullstack">Fullstack
-    </input>
-</label>
-    </div>
-<br>
-<div class="campo">
-  <label for="senioridade"><strong> Senioridade </strong></label>
-  <select id="senioridade">
-    <option selected disable value="">Selecione</option>
-    <option>Junior</option>
-        <option>Pleno</option>
-        <option>Senior</option> </select>
+<!DOCTYPE html>
+<html lang="pt-br">
+
+ <head>
+	
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css"> 
+
+	<title>Brincando com HTML e CSS.</title>
  
-</div>
-<fieldset class="grupo">
-  <div class="campo">
-    <label><strong>Selecione as tecnologias que utiliza:</strong></label><br><br>
-    <input type="checkbox" id="tecnologia1" value="HTML">
-    <label type="tecnologia1">HTML</label>
-     <input type="checkbox" id="tecnologia2" value="CSS">
-    <label type="tecnologia2">CSS</label>
-     <input type="checkbox" id="tecnologia3" value="javascript">
-    <label type="tecnologia3">Javascript</label>
-     <input type="checkbox" id="tecnologia4" value="PHP">
-    <label type="tecnologia4">PHP</label>
-     <input type="checkbox" id="tecnologia5" value="C#">
-    <label type="tecnologia5">C#</label>
-     <input type="checkbox" id="tecnologia6" value="python">
-    <label type="tecnologia6">Python</label>
-     <input type="checkbox" id="tecnologia7" value="java">
-    <label type="tecnologia7">Java</label>
-  </div>
-  </fieldset>
-<div class="campo">
-  <br>
-  <label><strong>Conte um pouco da sua experiência:</strong></label>
-  <textarea row="6" style="width: 26em" id="experiencia" nome="experiencia"></textarea>
-</div>
-<button class="botao" type="submit">Concluir</button>
-    </form>
+ </head>
+
+<body>
+    
+<main class="main_content container">
+	
+                <!--Inícia Formulário-->
+
+                    <div class="container_form">
+            
+                            <h1>Formulário da staff</h1><h1 id="h1"></h1>
+
+                            <form class="form" action="#" method="post">
+                                
+                                <div class="form_grupo">
+                                    <label for="nome" class="form_label"><b>Nome</b></label>
+                                    <input type="text" name="nome" class="form_input" id="nome" placeholder="Nome completo" required>
+                                </div>
+                                
+                                <div class="form_grupo">
+                                    <label for="e-mail" class="form_label"><b>Email</b></label>
+                                    <input type="email" name="email" class="form_input" id="e-mail" placeholder="Example@email.com" required>
+                                	<h1 id="h10"></h1>
+                                </div>
+                                
+                                <div class="form_grupo">
+                                    <label for="datanascimento" class="form_label"><b>Data de Nascimento</b></label>
+                                    <input type="date" name="datanascimento" class="form_input" id="datanascimento" required>
+                                	<h1 class="A" id="h10"></h1>
+                                </div>        
+
+                                <div class="form_grupo">
+                                    
+                                    <label for="Função" class="text"><b>Função</b></label>
+                                    <select name="estadocivil" class="dropdown" required>
+                                        
+                                        <option selected disabled class="form_select_option" value="">Selecione</option>
+                                        <option value="Mov. Chat" class="form_select_option">Mov. Chat</option>
+                                        <option value="Admin." class="form_select_option">Admin.</option>
+                                        <option value="Divulgador" class="form_select_option">Divulgador</option>                    
+                                        <option value="Moder." class="form_select_option">Moder.</option>                    
+                                    
+                                    </select>
+
+                                </div>
+
+                                <div class="form_grupo">
+
+                                    <span class="legenda">Sexo:</span>
+                                    
+                                    <div class="radio-btn">
+                                        <input type="radio" class="form_new_input" id="masculino" name="sexo" value="Masculino">
+                                        <label for="masculino" class="radio_label form_label"> <span class="radio_new_btn"></span> Masculino</label>
+                                    </div>
+
+                                    <div class="radio-btn">
+                                        <input type="radio" class="form_new_input" id="feminino" name="sexo" value="Feminino">
+                                        <label for="feminino" class="radio_label form_label"> <span class="radio_new_btn"></span> Feminino</label>
+                                    </div>
+
+                                </div>
+                              
+
+                                <div class="form_grupo">
+
+                                    <span class="legenda">Dias da semana livre</span>
+
+                                    <div class="check-btn">
+                                        <input type="checkbox" class="form_new_input" id="0">
+                                        <label for="0" class="form_label check_label"> <span class="check_new_btn"></span> Segunda</label>
+                                    </div>
+
+                                    <div class="check-btn">
+                                        <input type="checkbox" class="form_new_input" id="1">
+                                        <label for="1" class="form_label check_label"><span class="check_new_btn"></span> Terça</label>
+                                    </div>
+
+                                    <div class="check-btn">
+                                        <input type="checkbox" class="form_new_input" id="2">
+                                        <label for="2" class="form_label check_label"><span class="check_new_btn"></span> Quarta</label>
+                                    </div>
+
+                                    <div class="check-btn">
+                                        <input type="checkbox" class="form_new_input" id="3">
+                                        <label for="3" class="form_label check_label"><span class="check_new_btn"></span> Quinta</label>
+                                    </div>
+                                    
+
+                                    <div class="form_message">
+                                        
+                                        <label for="message" class="form_message_label"> Digite aqui o porque devemos te dar essa vaga:</label>
+                                        <textarea name="mensagem" id="message" cols="30" rows="3" class="form_input message_input" required></textarea>
+
+                                    </div>
+
+                                    <div id="0" class="submit">
+
+                                      <input type="hidden" name="acao" value="enviar">
+                                      <button type="submit" name="Submit" class="submit_btn" >Cadastrar</button>
+                                    
+                                    </div>
+                            </form>
+
+                    </div><!--container_form-->
+
+                <!--Finaliza Formulário-->
+
+
+</main>
+
+<footer class="main_footer container">
+    <div class="main_footer_copy">
+
+        <p class="m-b-footer">Robert - 2024, todos os direitos reservados.</p> 
+        <p class="by">Desenvolvido por: Robert.</p>
+    
+    </div>
+</footer>
+          
 </body>
 </html>
