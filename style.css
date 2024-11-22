@@ -25,7 +25,6 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: #ffffff; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
     border-radius: 10px; 
     padding: 2em;
@@ -38,49 +37,6 @@ body {
     color: #232323;
     margin-bottom: 10px;
     padding-bottom: 10px;
-    animation: A 5s infinite;
-}
-
-#h1 {
-    position: relative;
-    display: inline-block;
-}
-
-#h1::after, 
-#h10::after {
-    top: -25px;
-    content: '';
-    position: absolute;
-    border-bottom: 5px solid #262626;
-    width: 0;
-}
-
-.A {
-    top: -68px;
-    position: relative;
-}
-
-#h1::after {
-    animation: drawBorder 5s 1.2s forwards;
-}
-#h10::after {
-    animation: drawBorder1 5s forwards;
-}
-
-@keyframes drawBorder {
-    0% { width: 0; left: 0; }
-    25% { width: 89%; left: 0; }
-    50% { width: 0; left: 89%; }
-    75%, 100% { width: 89%; left: 0; }
-}
-
-@keyframes drawBorder1 {
-    0% { width: 100%; left: 0; opacity: 0; }
-    24% { opacity: 0; }
-    25% { width: 0; left: 100%; opacity: 1; }
-    50% { width: 100%; left: 0; }
-    75% { width: 0; left: 0; }
-    100% { width: 100%; left: 0; }
 }
 
 .form {
