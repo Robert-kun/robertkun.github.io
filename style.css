@@ -7,7 +7,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    heigth: 100vh;
 }
 .form {
     position: relative;
@@ -16,9 +16,11 @@ body {
 
 .container_form {
     width: 80%;
-    heigth: 100vh;
+    heigth: 100%;
     margin: 0 auto;
     display: flex;
+    aling-items: center;
+    justify-content: center;
     flex-direction: column;
     background:#ffffff; 
     box-shadow: 1px 0px 1.2px 0px #e3e3e3; 
