@@ -8,7 +8,7 @@
 /* Corpo e Centralização */
 body {
     margin: 0;
-    padding: 0;
+    padding: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -51,7 +51,7 @@ body {
 }
 
 .form_grupo .legenda { 
-    width: 100%;
+    width: 80%;
     margin-top: 15px;
     margin-bottom: 15px;
     font-weight: bold;
@@ -66,7 +66,7 @@ body {
     border: 1px solid #f2f2f2;
     background: #fdfdfd;
     outline: none;
-    width: 100%;
+    width: 80%;
     transition: all 0.3s;
 }
 
@@ -81,12 +81,12 @@ body {
     background: #fdfdfd;
     outline: none;
     padding-left: 10px;
-    width: 100%;
+    width: 80%;
 }
 
 .form_message,
 .form_message .message_input {
-    width: 100%;
+    width: 80%;
     float: left;
 }
 
