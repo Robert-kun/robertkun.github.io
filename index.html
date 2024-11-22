@@ -1,125 +1,93 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
- <head>
-	
-	<meta charset="utf-8">
-	<link rel="stylesheet" href="style.css"> 
-	 <link rel="stylesheet" href="reset.css">
-
-	<title>Brincando com HTML e CSS.</title>
- 
- </head>
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <!-- Certifique-se de que o arquivo CSS está na mesma pasta -->
+    <title>Formulário da Staff</title>
+</head>
 <body>
-    
-<main class="main_content container">
-	
-                <!--Inícia Formulário-->
+    <main class="container_form">
+        <h1 id="h1">Formulário da Staff</h1>
 
-                    <div class="container_form">
+        <!-- Formulário -->
+        <form class="form" action="#" method="post">
             
-                            <h1>Formulário da staff</h1>
-<h1 id="h1"></h1>
+            <!-- Nome -->
+            <div class="form_grupo">
+                <label for="nome" class="form_label"><b>Nome</b></label>
+                <input type="text" name="nome" class="form_input" id="nome" placeholder="Nome completo" required>
+            </div>
 
-                            <form class="form" action="#" method="post">
-                                
-                                <div class="form_grupo">
-                                    <label for="nome" class="form_label"><b>Nome</b></label>
-                                    <input type="text" name="nome" class="form_input" id="nome" placeholder="Nome completo" required>
-                                </div>
-                                
-                                <div class="form_grupo">
-                                    <label for="e-mail" class="form_label"><b>Email</b></label>
-                                    <input type="email" name="email" class="form_input" id="e-mail" placeholder="Example@email.com" required>
-                                	<h1 id="h10"></h1>
-                                </div>
-                                
-                                <div class="form_grupo">
-                                    <label for="datanascimento" class="form_label"><b>Data de Nascimento</b></label>
-                                    <input type="date" name="datanascimento" class="form_input" id="datanascimento" required>
-                                	<h1 class="A" id="h10"></h1>
-                                </div>        
+            <!-- Email -->
+            <div class="form_grupo">
+                <label for="email" class="form_label"><b>Email</b></label>
+                <input type="email" name="email" class="form_input" id="email" placeholder="seuemail@email.com" required>
+            </div>
 
-                                <div class="form_grupo">
-                                    
-                                    <label for="Função" class="text"><b>Função</b></label>
-                                    <select name="estadocivil" class="dropdown" required>
-                                        
-                                        <option selected disabled class="form_select_option" value="">Selecione</option>
-                                        <option value="Mov. Chat" class="form_select_option">Mov. Chat</option>
-                                        <option value="Admin." class="form_select_option">Admin.</option>
-                                        <option value="Divulgador" class="form_select_option">Divulgador</option>                    
-                                        <option value="Moder." class="form_select_option">Moder.</option>                    
-                                    
-                                    </select>
+            <!-- Data de Nascimento -->
+            <div class="form_grupo">
+                <label for="datanascimento" class="form_label"><b>Data de Nascimento</b></label>
+                <input type="date" name="datanascimento" class="form_input" id="datanascimento" required>
+            </div>
 
-                                </div>
+            <!-- Função -->
+            <div class="form_grupo">
+                <label for="funcao" class="form_label"><b>Função</b></label>
+                <select name="funcao" class="dropdown" id="funcao" required>
+                    <option value="" disabled selected>Selecione</option>
+                    <option value="mov_chat">Mov. Chat</option>
+                    <option value="admin">Admin.</option>
+                    <option value="divulgador">Divulgador</option>
+                    <option value="moderador">Moderador</option>
+                </select>
+            </div>
 
-                                <div class="form_grupo">
+            <!-- Sexo -->
+            <div class="form_grupo">
+                <span class="legenda">Sexo:</span>
+                <div class="radio-btn">
+                    <input type="radio" name="sexo" id="masculino" class="form_new_input" value="Masculino" required>
+                    <label for="masculino" class="radio_label"><span class="radio_new_btn"></span> Masculino</label>
+                </div>
+                <div class="radio-btn">
+                    <input type="radio" name="sexo" id="feminino" class="form_new_input" value="Feminino" required>
+                    <label for="feminino" class="radio_label"><span class="radio_new_btn"></span> Feminino</label>
+                </div>
+            </div>
 
-                                    <span class="legenda">Sexo:</span>
-                                    
-                                    <div class="radio-btn">
-                                        <input type="radio" class="form_new_input" id="masculino" name="sexo" value="Masculino">
-                                        <label for="masculino" class="radio_label form_label"> <span class="radio_new_btn"></span> Masculino</label>
-                                    </div>
+            <!-- Dias da Semana Livres -->
+            <div class="form_grupo">
+                <span class="legenda">Dias da Semana Livre:</span>
+                <div class="check-btn">
+                    <input type="checkbox" id="segunda" class="form_new_input" name="dias_livres[]" value="Segunda">
+                    <label for="segunda" class="check_label"><span class="check_new_btn"></span> Segunda</label>
+                </div>
+                <div class="check-btn">
+                    <input type="checkbox" id="terca" class="form_new_input" name="dias_livres[]" value="Terça">
+                    <label for="terca" class="check_label"><span class="check_new_btn"></span> Terça</label>
+                </div>
+                <div class="check-btn">
+                    <input type="checkbox" id="quarta" class="form_new_input" name="dias_livres[]" value="Quarta">
+                    <label for="quarta" class="check_label"><span class="check_new_btn"></span> Quarta</label>
+                </div>
+                <div class="check-btn">
+                    <input type="checkbox" id="quinta" class="form_new_input" name="dias_livres[]" value="Quinta">
+                    <label for="quinta" class="check_label"><span class="check_new_btn"></span> Quinta</label>
+                </div>
+            </div>
 
-                                    <div class="radio-btn">
-                                        <input type="radio" class="form_new_input" id="feminino" name="sexo" value="Feminino">
-                                        <label for="feminino" class="radio_label form_label"> <span class="radio_new_btn"></span> Feminino</label>
-                                    </div>
+            <!-- Mensagem -->
+            <div class="form_grupo">
+                <label for="message" class="form_message_label">Por que devemos te dar essa vaga?</label>
+                <textarea name="mensagem" id="message" cols="30" rows="4" class="form_input message_input" required></textarea>
+            </div>
 
-                                </div>
-                              
-
-                                <div class="form_grupo">
-
-                                    <span class="legenda">Dias da semana livre</span>
-
-                                    <div class="check-btn">
-                                        <input type="checkbox" class="form_new_input" id="0">
-                                        <label for="0" class="form_label check_label"> <span class="check_new_btn"></span> Segunda</label>
-                                    </div>
-
-                                    <div class="check-btn">
-                                        <input type="checkbox" class="form_new_input" id="1">
-                                        <label for="1" class="form_label check_label"><span class="check_new_btn"></span> Terça</label>
-                                    </div>
-
-                                    <div class="check-btn">
-                                        <input type="checkbox" class="form_new_input" id="2">
-                                        <label for="2" class="form_label check_label"><span class="check_new_btn"></span> Quarta</label>
-                                    </div>
-
-                                    <div class="check-btn">
-                                        <input type="checkbox" class="form_new_input" id="3">
-                                        <label for="3" class="form_label check_label"><span class="check_new_btn"></span> Quinta</label>
-                                    </div>
-                                    
-
-                                    <div class="form_message">
-                                        
-                                        <label for="message" class="form_message_label"> Digite aqui o porque devemos te dar essa vaga:</label>
-                                        <textarea name="mensagem" id="message" cols="30" rows="3" class="form_input message_input" required></textarea>
-
-                                    </div>
-
-                                    <div id="0" class="submit">
-
-                                      <input type="hidden" name="acao" value="enviar">
-                                      <button type="submit" name="Submit" class="submit_btn" >Cadastrar</button>
-                                    
-                                    </div>
-                            </form>
-
-                    </div><!--container_form-->
-
-                <!--Finaliza Formulário-->
-
-
-</main>
-
-          
+            <!-- Botão de Enviar -->
+            <div class="submit">
+                <button type="submit" class="submit_btn">Cadastrar</button>
+            </div>
+        </form>
+    </main>
 </body>
 </html>
